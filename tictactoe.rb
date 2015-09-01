@@ -1,11 +1,5 @@
 module TicTacToe 
 
-	game = true
-	player = true
-	spot = 0
-
-	board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-
 	def get_input(player)
 		players = 0
 		if player
@@ -38,12 +32,18 @@ module TicTacToe
 		"""
 	end
 
-	while game
+end
 
-		spot = get_input(player)
-		logic(board, spot, player)
-		render(board)
+game = true
+player = true
+spot = 0
 
-	end
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+while game
+
+		spot = TicTacToe::get_input(player)
+		TicTacToe::logic(board, spot, player)
+		TicTacToe::render(board)
 
 end
